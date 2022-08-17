@@ -1,0 +1,46 @@
+ALGORITHM FIRST_TASK
+VAR
+str:STRING[50];
+i,w,v:INTEGER:=0;
+BEGIN
+Write ("Give the first String");
+Read(str)
+WHILE (i<str.length) DO
+    IF(str[i]=""|| str[i]=".") THEN
+    w=w+1;
+    Write("Number of words are :",w)
+    END_IF
+    IF(str[i]="a"||
+    str[i]="e"||
+    str[i]="o"||
+    str[i]="u"||
+    str[i]="y"||
+    str[i]="A"||
+    str[i]="O"||
+    str[i]="U"||
+    str[i]="Y"||
+    str[i]="E"
+    )THEN
+    v=v+1;
+    Write("Number of words are :",v)
+END_IF
+END_WHILE
+
+
+//////////////////////////SECOND_TASK/////////////
+ALGORITHM SecondTask
+VAR
+Set1 : INTEGER[50];
+Set2 : INTEGER[50];
+i,j : INTEGER:=0;
+sum=0;
+BEGIN
+FOR i FROM 0 TO Set1.length DO
+FOR j FROM 0 TO Set2.length DO
+IF (Set1[i]<>Set2[j])THEN
+sum=Set1[i]+Set2[j]
+END_IF
+i:=i+1;
+j:=j+1;
+END_FOR
+END_FOR
